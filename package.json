@@ -1,5 +1,6 @@
 {
-  "name": "vite-template-solid",
+  "name": "movie-trailer",
+  "homepage": "https://koki9861.github.io/movie-trailer/",
   "version": "0.0.0",
   "description": "",
   "scripts": {
