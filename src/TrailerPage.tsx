@@ -16,6 +16,7 @@ import './TrailerPage.css';
 
 const TrailerPage = () => {
 	
+	const sleep = (msec: number) => new Promise(resolve => setTimeout(resolve, msec));
 	const getTrailerUrl = async () => 
   		(await fetch(`https://script.google.com/macros/s/AKfycbzM3BISP7XrPNVz2PDWkErkK8dUkmWaNL7J20ULh52qKlU-NbbO4VXTvwU2unc08NnZnw/exec`)).json();
 
@@ -51,7 +52,6 @@ const TrailerPage = () => {
 		createPlayer("89U5Sva2qdc");
 	})
 	
-	const sleep = (msec: number) => new Promise(resolve => setTimeout(resolve, msec));
 	const nextTrailer = () => {
 		player()?.destroy();
 		setPlaying(false);
