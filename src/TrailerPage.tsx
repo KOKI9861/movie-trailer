@@ -1,4 +1,4 @@
-import { createSignal, createEffect, Switch, Match } from 'solid-js';
+import { createSignal, createEffect, Switch, Match, createResource } from 'solid-js';
 
 import Button from "@suid/material/Button";
 import IconButton from "@suid/material/IconButton";
@@ -13,12 +13,17 @@ import YouTubePlayer from 'youtube-player';
 import PlayerStates from 'youtube-player/dist/constants/PlayerStates';
 
 import './TrailerPage.css';
+import { useParams } from 'solid-app-router';
+
+const URL = "https://script.google.com/macros/s/AKfycbz6AnZ_3nz7tzYGpFyMf5d6Xu-Jj8p2UuwbkbVQu6iZ4FaXIXAdVKIfywrIktp13OcS4w/exec";
 
 const TrailerPage = () => {
+	const params = useParams();
+	const [method] = createResource(() => params.method);
 	
 	const sleep = (msec: number) => new Promise(resolve => setTimeout(resolve, msec));
 	const getTrailerUrl = async () => 
-  		(await fetch(`https://script.google.com/macros/s/AKfycbzM3BISP7XrPNVz2PDWkErkK8dUkmWaNL7J20ULh52qKlU-NbbO4VXTvwU2unc08NnZnw/exec`)).json();
+  		(await fetch(`${URL}?method=${method()}`)).json();
 
 	const [player, setPlayer] = createSignal<ReturnType<typeof YouTubePlayer> | null>(null);
 	const [playing, setPlaying] = createSignal(false);

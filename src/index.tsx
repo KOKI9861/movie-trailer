@@ -1,6 +1,13 @@
 /* @refresh reload */
 import { render } from 'solid-js/web';
+import { Router } from 'solid-app-router';
 
-import TrailerPage from './TrailerPage';
+import App from './App';
 
-render(() => <TrailerPage />, document.getElementById('root') as HTMLElement);
+render(() => (
+	<Router>
+		<App />
+	</Router>
+	), 
+	document.getElementById('root') as HTMLElement
+);
