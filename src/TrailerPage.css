@@ -1,3 +1,69 @@
 body{
 	background-color:#000000;	
 }
+
+.title-gradient {
+	background-image: radial-gradient(rgba(110, 7, 7, 1), rgb(0, 0, 0, 1) 70%);
+}
+
+.neonText {
+	color: #fff;
+	text-shadow:
+	  0 0 7px #78deeb,
+	  0 0 10px #78deeb,
+	  0 0 21px #78deeb,
+	  0 0 42px #13bffe,
+	  0 0 82px #13bffe,
+	  0 0 92px #13bffe,
+	  0 0 102px #13bffe,
+	  0 0 151px #13bffe;
+	/* animation: pulsate 1.5s infinite alternate;   */
+	border: 0.2rem solid #78deeb;
+	border-radius: 2rem;
+	padding: 0.4em;
+}
+
+.neonText2 {
+	color: #fff;
+	text-shadow:
+	  0 0 7px #78deeb,
+	  0 0 10px #78deeb,
+	  0 0 42px #13bffe,
+	  0 0 82px #13bffe;
+	/* animation: pulsate 1.5s infinite alternate;   */
+	border: 0.2rem solid #78deeb;
+	border-radius: 2rem;
+	padding: 0.4em;
+}
+
+/* 
+@keyframes pulsate {
+	  
+	100% {
+  
+		text-shadow:
+		0 0 4px #fff,
+		0 0 11px #fff,
+		0 0 19px #fff,
+		0 0 40px #13bffe,
+		0 0 80px #13bffe,
+		0 0 90px #13bffe,
+		0 0 100px #13bffe,
+		0 0 150px #13bffe;
+	
+	}
+	
+	0% {
+  
+	  text-shadow:
+	  0 0 2px #fff,
+	  0 0 4px #fff,
+	  0 0 6px #fff,
+	  0 0 10px #13bffe,
+	  0 0 45px #13bffe,
+	  0 0 55px #13bffe,
+	  0 0 70px #13bffe,
+	  0 0 80px #13bffe;
+  
+ 	}
+} */
